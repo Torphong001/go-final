@@ -98,7 +98,7 @@ function Signup() {
           </Grid>
           <Box mt={2}>
             <Button type="submit" variant="contained" color="primary">
-              Sign Up
+              Register
             </Button>
           </Box>
         </form>

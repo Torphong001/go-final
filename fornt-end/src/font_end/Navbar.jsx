@@ -16,7 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout"; // เพิ่มไอคอนเข้ามา
 
-function Header() {
+function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [loggedIn, setLoggedIn] = useState(
     localStorage.getItem("user") ? true : false
@@ -71,7 +71,7 @@ function Header() {
                   to="/signup"
                   style={{ color: "inherit", textDecoration: "none" }}
                 >
-                  Signup
+                  Register
                 </Link>
               </Button>
             </>
@@ -119,4 +119,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;
