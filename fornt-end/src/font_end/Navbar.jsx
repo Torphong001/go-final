@@ -13,17 +13,16 @@ import {
   Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout"; // เพิ่มไอคอนเข้ามา
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [loggedIn, setLoggedIn] = useState(
-    localStorage.getItem("user") ? true : false
+    localStorage.getItem("email") ? true : false
   );
 
   const handleLogout = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem("email");
     setLoggedIn(false); // เปลี่ยนสถานะเป็นไม่ได้ล็อกอิน
     window.location.href = "/login";
   };
@@ -83,7 +82,7 @@ function Navbar() {
           <ListItem
             button
             component={Link}
-            to="/indexStudent"
+            to="/Student"
             onClick={toggleDrawer}
           >
             <ListItemText primary="Students" />
@@ -91,7 +90,7 @@ function Navbar() {
           <ListItem
             button
             component={Link}
-            to="/indexSubject"
+            to="/Subject"
             onClick={toggleDrawer}
           >
             <ListItemText primary="Subjects" />
@@ -99,17 +98,12 @@ function Navbar() {
           <ListItem
             button
             component={Link}
-            to="/indexTeacher"
+            to="/Teacher"
             onClick={toggleDrawer}
           >
             <ListItemText primary="Teachers" />
           </ListItem>
-          <ListItem
-            button
-            component={Link}
-            to="/indexUser"
-            onClick={toggleDrawer}
-          >
+          <ListItem button component={Link} to="/User" onClick={toggleDrawer}>
             <ListItemText primary="Users" />
           </ListItem>
           <Divider />

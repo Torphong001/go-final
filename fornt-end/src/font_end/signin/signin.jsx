@@ -21,7 +21,7 @@ function Login() {
         if (response.ok) {
           // เมื่อ login สำเร็จ
           // บันทึกข้อมูลผู้ใช้ลงใน localStorage
-          localStorage.setItem("user", JSON.stringify({ email: email }));
+          localStorage.setItem("email", JSON.stringify(email));
           // นำผู้ใช้ไปยังหน้าหลักหลังจาก login สำเร็จ
           window.location.href = "/";
         } else {

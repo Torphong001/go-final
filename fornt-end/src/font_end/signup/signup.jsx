@@ -40,7 +40,7 @@ function Signup() {
       })
       .then((data) => {
         console.log("Success:", data);
-        // เมื่อสมัครสมาชิกเสร็จสมบูรณ์ ให้เปลี่ยนทางไปยังหน้า login ทันที
+
         window.location.href = "/login";
       })
       .catch((error) => {

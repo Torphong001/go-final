@@ -83,23 +83,21 @@ function UserList() {
           <TableRow>
             <TableCell>Email</TableCell>
             <TableCell>Name</TableCell>
-            <TableCell>Password</TableCell>
             <TableCell>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {filteredUsers.map((user) => (
             <TableRow key={user.ID}>
-              <TableCell>{user.Email}</TableCell>
               <TableCell>{user.Name}</TableCell>
-              <TableCell>{user.Password}</TableCell>
+              <TableCell>{user.Email}</TableCell>
               <TableCell>
                 <Button
                   variant="contained"
                   color="primary"
                   onClick={() => handleEdit(user)}
                 >
-                  Edit
+                  แก้ไข
                 </Button>
                 <Button
                   variant="contained"
